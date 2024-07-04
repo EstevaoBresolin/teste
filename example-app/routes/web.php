@@ -3,13 +3,13 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\JogosController;
 
-Route::get('/', function () {
+Route::get('/jogos', function () {
     return view('about-us');
 })-> name('homeIndex');
 
 
 
-Route::get('/jogos', [JogosController::class, 'index'])-> name('jogos');
+Route::get('/', [JogosController::class, 'index'])-> name('jogos');
 
 // Route::view('/jogos', 'jogos',['name'=>'GTA']);
 
